@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day Lauren</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe6e6;
+            overflow-x: hidden;
+            padding-bottom: 100px;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #ff4d6d;
+            margin-top: 20vh;
+        }
+        .hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        .heart {
+            position: absolute;
+            color: #ff4d6d;
+            font-size: 2em;
+            animation: float 4s infinite ease-in-out;
+        }
+        @keyframes float {
+            0% { transform: translateY(100vh) scale(0.5); opacity: 1; }
+            100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
+        }
+        .message {
+            font-size: 1.5em;
+            color: #ff4d6d;
+            padding: 20px;
+            max-width: 90%;
+            margin: 50px auto;
+            opacity: 1;
+        }
+        .final-section {
+            margin-top: 50px;
+            font-size: 1.3em;
+            color: #ff4d6d;
+            padding-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>HAPPY VALENTINE'S DAY LAUREN ❤️</h1>
+    
+    <div class="hearts"></div>
+    
+    <div class="message" id="message">Lauren,
+
+      You are truly such a special person in my life different from any others I know, different from anyone closest to me. Meeting you is one of the highlights of my life, and every day with you is a blessing. I am so grateful to have you in my life.
+      
+      I remember this time last year so clearly it was when the spark between us grew even brighter, and I knew this feeling wasn’t just something fleeting. I knew it would last. And the truth is, it still has. You probably already know how I feel about you, but I need to say it anyway—because no matter how much time passes, my feelings for you haven’t changed. They run deep, and they don’t fade, even when we’re not talking or when we’re far apart.
+      
+      When you truly love someone, I believe that love doesn’t just stay in the moments when you’re together. It’s felt even more deeply in the absence, in the spaces between our conversations, and in the times when we’re apart. Even when we’re not talking every day, my feelings for you remain the same. I think of you, I care for you, and I feel the same way about you—just as strongly as ever.
+      
+      I love you every single day, but since today is Valentine’s Day, the day of love, I thought it would be nice to show you that love in my own special way.
+      
+      The happiness you’ve brought into my life is beyond words, and what we’ve shared over this past year is something I will always cherish. I can’t wait to make more memories with you, to spend time together, and to see where the relationship we have continues to go over time.
+      
+      I always want to be there for you, to listen to you, and to care for you as best I can because there is no other person I’d rather endure anything with than you. I say things like this all the time, but it’s because I truly mean what I say I’ll always choose you.
+      
+      Below is a playlist I put together. I’d love to explain why each song makes me think of you, but I want to let you interpret that for yourself. The last song is different from the others. I know I haven’t taught you much Creole, but I thought since you love learning new languages, it could be like a little "find the meaning" game for you. Hope you enjoy it!
+      
+      Happy Valentine’s Day, Lauren.
+      
+      With all my heart,
+      Sammy💓
+      
+      </div>
+    
+    <div class="final-section">
+        <p>Click for a surprise 💝</p>
+        <a href="https://open.spotify.com/playlist/0RVBSjSV4epNR0VDYcxCsf?si=54f7fa654d1b4035&pt=6b4d41233f9fae41650ea63df112d9eb" target="_blank">🎵 Playlist just for you</a>
+    </div>
+    
+    <script>
+        // Generate floating hearts
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.innerHTML = "❤️";
+            document.querySelector(".hearts").appendChild(heart);
+            
+            const size = Math.random() * 20 + 10;
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.fontSize = size + "px";
+            heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+            
+            setTimeout(() => heart.remove(), 4000);
+        }
+        setInterval(createHeart, 300);
+    </script>
+</body>
+</html>
+
